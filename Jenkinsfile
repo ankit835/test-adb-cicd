@@ -8,7 +8,7 @@ agent { dockerfile true }
     
     stages { 
         stage('deploy') {
-           when { branch 'main' }
+           when { branch 'test' }
 
             steps {  
 
