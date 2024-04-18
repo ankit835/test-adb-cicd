@@ -18,7 +18,7 @@ agent { dockerfile true }
                         
                     // ''' 
                 script {
-                    sh "configure.sh ${env.DATABRICKS_HOST_MAIN} ${env.DATABRICKS_TOKEN_MAIN}"
+                    sh "test.sh ${env.DATABRICKS_HOST_MAIN} ${env.DATABRICKS_TOKEN_MAIN}"
                 }
 
                 // DDL deployment
