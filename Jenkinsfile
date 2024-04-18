@@ -2,7 +2,7 @@
 pipeline {
 agent { dockerfile true }
     environment{ 
-            DATABRICKS_TOKEN_MAIN= credentials('adb-token1')
+            DATABRICKS_TOKEN_MAIN= credentials('adb-token2')
       		//DATABRICKS_TOKEN_QA= credentials('adb-token1')
             }
     
