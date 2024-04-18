@@ -3,7 +3,7 @@ pipeline {
 agent { dockerfile true }
     environment{ 
             DATABRICKS_TOKEN_MAIN= credentials('adb-token2')
-      		//DATABRICKS_TOKEN_QA= credentials('adb-token1')
+      		DATABRICKS_HOST_MAIN= credentials('host-url')
             }
     
     stages { 
@@ -12,11 +12,14 @@ agent { dockerfile true }
 
             steps {  
 
-                    sh '''
+                    // sh '''
                         
-                        echo "${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN}' |  databricks configure --token"
+                    //     echo "${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN}' |  databricks configure --token"
                         
-                    ''' 
+                    // ''' 
+                script {
+                    sh "configure.sh ${env.DATABRICKS_HOST_MAIN} ${env.DATABRICKS_TOKEN_MAIN}"
+                }
 
                 // DDL deployment
                      sh '''
