@@ -1,0 +1,1 @@
+databricks configure --token
