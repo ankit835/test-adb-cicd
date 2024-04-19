@@ -18,8 +18,10 @@ agent { dockerfile true }
                         
                     // ''' 
                 script {
-                    sh 'echo ${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN} | databricks configure --token'
+                    sh "echo '${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN}' | databricks configure --token"
                 }
+
+                
 
                 // DDL deployment
                      sh '''
