@@ -14,3 +14,5 @@ RUN apt update -y
 RUN pip install databricks-cli
 RUN pip install databricks-cli --upgrade
 
+RUN chmod +755 /usr/local/bin/databricks
+
