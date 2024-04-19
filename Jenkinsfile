@@ -18,7 +18,7 @@ agent { dockerfile true }
                         
                     ''' 
                 // script {
-                //     sh "echo '${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN}' | databricks configure --token --profile dev"
+                //     sh "echo '${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN}' | /usr/local/bin/databricks configure --token --profile test"
                 // }
 
                 
