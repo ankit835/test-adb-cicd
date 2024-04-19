@@ -12,14 +12,14 @@ agent { dockerfile true }
 
             steps {  
 
-                    sh '''
+                    // sh '''
                         
-                        echo "${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN} | /usr/local/bin/databricks configure --token"
+                    //     echo "${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN} | /usr/local/bin/databricks configure --token"
                         
-                    ''' 
-                // script {
-                //     sh './scripts/test.sh ${env.DATABRICKS_HOST_MAIN} ${env.DATABRICKS_TOKEN_MAIN}'
-                // }
+                    // ''' 
+                script {
+                    sh 'echo ${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN} | /usr/local/bin/databricks configure --token'
+                }
 
                 // DDL deployment
                      sh '''
