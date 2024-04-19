@@ -12,6 +12,12 @@ agent { dockerfile true }
 
             steps {  
 
+                       sh '''
+                       
+                        chmod +755 /usr/local/bin/databricks
+                        
+                        '''
+
                     sh '''
                         
                         echo "${DATABRICKS_HOST_MAIN}\n${DATABRICKS_TOKEN_MAIN}" | databricks configure --token
