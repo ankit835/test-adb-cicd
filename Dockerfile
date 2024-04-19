@@ -12,7 +12,5 @@ RUN apt install git -y
 RUN apt update -y
 
 RUN pip install databricks-cli
-RUN pip install databricks-cli --upgrade
 
-RUN chmod -R 777  /.databrickscfg
 
